@@ -34,8 +34,8 @@ To determine wich sprite frame will be rendered for the entity in-game, one must
 	<img src="img/3.png" width="317" height="289"/>
 </p>
 
-**Tilesets can also be treated as a group of different entities : **
-This can be accomplished by removing the **.ent** extension from the **tileset name**, requiring each tile to have an additional property : 'n' 
+Tilesets can also be treated as a group of different entities : 
+This can be accomplished by removing the .ent extension from the tileset name, requiring each tile to have an additional property : 'n' 
 > NOTE : The entity name string prop ('n') value must end with the .ent extension
 
 #### Export Tiled Map as .json
@@ -49,15 +49,16 @@ This can be accomplished by removing the **.ent** extension from the **tileset n
 > node ethtiled.js exported.json
 > ( NODEJS REQUIRED TO RUN SCRIPT )
 
-<p align="center"><img src="img/5.png" width="510" height="251"/></p>
+<p align="center"><img src="img/6.png" width="510" height="251"/></p>
 
 #### Include ETHTiled Lib in your main.angelscript
-> #include "ETHTiled.angelscript"
+```
+ #include "ETHTiled.angelscript"
 
-> void main(){ LoadScene("empty", "gameInit", "gameLoop"); }
-> void gameInit(){ EMX('example.emx'); /*add your init. logic*/ }
-> void gameLoop(){ /*add your game logic*/ }
-
+ void main(){ LoadScene("empty", "gameInit", "gameLoop"); }
+ void gameInit(){ EMX('example.emx'); /*add your init. logic*/ }
+ void gameLoop(){ /*add your game logic*/ }
+```
 #### Remember ...
 
 That the entity names used in the tilesets must be defined as entities in your proyect/entities directory.
